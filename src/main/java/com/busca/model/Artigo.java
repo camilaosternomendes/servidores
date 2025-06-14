@@ -1,12 +1,12 @@
 package com.busca.model;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.Serializable; 
 
 public class Artigo implements Serializable {
+    private static final long serialVersionUID = 1L; 
+
+    private String title;
+    private String abstractText;
+    private String label;
 
 }
