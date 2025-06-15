@@ -161,4 +161,5 @@ Para executar o sistema, você precisará iniciar cada componente em sua ordem c
 
 * Camila Osterno
 * Cariny Saldanha
+* Breno Gonçalves 
 * [Seu Nome Aqui, se houver mais]
