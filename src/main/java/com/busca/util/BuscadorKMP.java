@@ -29,10 +29,6 @@ public class BuscadorKMP {
         return lps;
     }
 
-    /**
-     * Busca todas as ocorrências de um padrão (substring) em um texto usando o algoritmo KMP.
-     * A busca não diferencia maiúsculas de minúsculas.
-     */
     public static List<Integer> search(String text, String pattern) {
         List<Integer> occurrences = new ArrayList<>();
         if (text == null || pattern == null || text.isEmpty() || pattern.isEmpty()) {
@@ -73,4 +69,29 @@ public class BuscadorKMP {
         return occurrences;
     }
 
+    public static void main(String[] args) {
+        String text1 = "ABABDABACDABABCABAB";
+        String pattern1 = "ABABCABAB";
+        List<Integer> found1 = BuscadorKMP.search(text1, pattern1);
+        System.out.println("Text: " + text1 + ", Pattern: " + pattern1);
+        System.out.println("Occurrences at indices: " + found1);
+
+        String text2 = "AAAAAA";
+        String pattern2 = "AA";
+        List<Integer> found2 = BuscadorKMP.search(text2, pattern2);
+        System.out.println("\nText: " + text2 + ", Pattern: " + pattern2);
+        System.out.println("Occurrences at indices: " + found2);
+
+        String text3 = "O rato roeu a roupa do rei de Roma.";
+        String pattern3 = "Rato";
+        List<Integer> found3 = BuscadorKMP.search(text3, pattern3);
+        System.out.println("\nText: " + text3 + ", Pattern: " + pattern3);
+        System.out.println("Occurrences at indices: " + found3);
+
+        String text4 = "Este e um exemplo de texto para teste.";
+        String pattern4 = "não existe";
+        List<Integer> found4 = BuscadorKMP.search(text4, pattern4);
+        System.out.println("\nText: " + text4 + ", Pattern: " + pattern4);
+        System.out.println("Occurrences at indices: " + found4);
+    }
 }
