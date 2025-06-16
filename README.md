@@ -114,29 +114,61 @@ Para executar o sistema, você precisará iniciar cada componente em sua ordem c
 
 2.  **Inicie os Servidores na seguinte ordem (um em cada terminal):**
 
-    * **Terminal 1: Servidor B (porta 12346)**
+    * **Terminal 1: Servidor A (porta 12345)**
+       ***Windows
+      ```bash 
+        javac -d out -cp "lib/*" $(find src -name "*.java")
+        java -cp "lib\*;out" com.busca.servidores.ServidorA
+        ```
+      ***Linux/MacOS
         ```bash
+        javac -d out -cp "lib/*" $(find src -name "*.java")
+        java -cp "lib\*:out" com.busca.servidores.ServidorA
+        ```
+        *Aguarde a mensagem: `Servidor A: Escutando na porta 12345 por clientes...`*
+      
+    * **Terminal 2: Servidor B (porta 12346)**
+      ***Windows
+      ```bash 
+        javac -d out -cp "lib/*" $(find src -name "*.java")
         java -cp "lib\*;out" com.busca.servidores.ServidorB
+        ```
+      ***Linux/MacOS
+        ```bash
+        javac -d out -cp "lib/*" $(find src -name "*.java")
+        java -cp "lib\*:out" com.busca.servidores.ServidorB
         ```
         *Aguarde a mensagem: `Servidor B: Escutando na porta 12346...`*
 
-    * **Terminal 2: Servidor C (porta 12347)**
-        ```bash
+    * **Terminal 3: Servidor C (porta 12347)**
+      ***Windows
+      ```bash 
+        javac -d out -cp "lib/*" $(find src -name "*.java")
         java -cp "lib\*;out" com.busca.servidores.ServidorC
         ```
-        *Aguarde a mensagem: `Servidor C: Escutando na porta 12347...`*
-
-    * **Terminal 3: Servidor A (porta 12345)**
+      ***Linux/MacOS
         ```bash
-        java -cp "lib\*;out" com.busca.servidores.ServidorA
+        javac -d out -cp "lib/*" $(find src -name "*.java")
+        java -cp "lib\*:out" com.busca.servidores.ServidorC
         ```
-        *Aguarde a mensagem: `Servidor A: Escutando na porta 12345 por clientes...`*
+        *Aguarde a mensagem: `Servidor C: Escutando na porta 12347...`*
 
 3.  **Inicie o Cliente (no quarto terminal):**
 
     * **Terminal 4: Cliente**
         ```bash
+        javac -d out -cp "lib/*" $(find src -name "*.java")
         java -cp "lib\*;out" com.busca.Cliente
+        ```
+         ***Windows
+      ```bash 
+        javac -d out -cp "lib/*" $(find src -name "*.java")
+        java -cp "lib\*;out" com.busca.Cliente
+        ```
+      ***Linux/MacOS
+        ```bash
+        javac -d out -cp "lib/*" $(find src -name "*.java")
+        java -cp "lib\*:out" com.busca.Cliente
         ```
         *Você verá: `Digite sua busca: `*
 
