@@ -115,7 +115,9 @@ Para executar o sistema, você precisará iniciar cada componente em sua ordem c
 2.  **Inicie os Servidores na seguinte ordem (um em cada terminal):**
 
     * **Terminal 1: Servidor A (porta 12345)**
+      
       Windows
+
          ```bash 
         javac -d out -cp "lib/*" $(find src -name "*.java")
         java -cp "lib\*;out" com.busca.servidores.ServidorA
@@ -128,8 +130,10 @@ Para executar o sistema, você precisará iniciar cada componente em sua ordem c
         *Aguarde a mensagem: `Servidor A: Escutando na porta 12345 por clientes...`*
       
     * **Terminal 2: Servidor B (porta 12346)**
+
       Windows
-         ```bash 
+
+       ```bash 
         javac -d out -cp "lib/*" $(find src -name "*.java")
         java -cp "lib\*;out" com.busca.servidores.ServidorB
         ```
@@ -141,6 +145,7 @@ Para executar o sistema, você precisará iniciar cada componente em sua ordem c
         *Aguarde a mensagem: `Servidor B: Escutando na porta 12346...`*
 
     * **Terminal 3: Servidor C (porta 12347)**
+    
       Windows
          ```bash 
         javac -d out -cp "lib/*" $(find src -name "*.java")
@@ -156,6 +161,7 @@ Para executar o sistema, você precisará iniciar cada componente em sua ordem c
 3.  **Inicie o Cliente (no quarto terminal):**
 
     * **Terminal 4: Cliente**
+
       Windows
          ```bash 
         javac -d out -cp "lib/*" $(find src -name "*.java")
